@@ -70,7 +70,7 @@ Configuring the drbd file on both nodes:
     vim /etc/drbd.conf
 
 ```
-resource resource0 {
+resource r0 {
 protocol C;
 on node1 {
 device /dev/drbd0;
