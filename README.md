@@ -1,9 +1,5 @@
- 
-
-
-
 # **High Availability Cluster with DRBD, Pacemaker and Heartbeat**
-We will be making HA cluster with DRDB, Peacemaker and Corosync/heartbeat. Synchronization will happen between two nodes will allow the replication of the data.
+We will be making HA cluster with DRDB, Pacemaker and Corosync/heartbeat. Synchronization will happen between two nodes will allow the replication of the data.
 
 ## Changing the hostname of node 1:
 
@@ -122,15 +118,15 @@ Mounting drbd0:
 
 # Pacemaker and Corosync/Heartbeat Setup
 
-Installing peacemaker, corosync and pcs both nodes:
+Installing pacemaker, corosync and pcs both nodes:
 
     yum -y install corosync pacemaker pcs
 
-Enabling the services of pcs, peacemaker and corosync in both nodes:
+Enabling the services of pcs, pacemaker and corosync in both nodes:
 
     system enable pcsd
     system enable corosync
-    system enable peacemaker
+    system enable pacemaker
     systemctl start pcsd
 
 Authorizing the servers with hacluster and pcs commands in node 1:
@@ -149,4 +145,4 @@ Checking the status of pcs and corosync:
 Checking the status of corosync:
 
     pcs status corosync
-**Now our corosync, pcs, peacmaker and drbd has started working and can communicate with each other.**
+**Now our corosync, pcs, pacemaker and drbd has started working and can communicate with each other.**
