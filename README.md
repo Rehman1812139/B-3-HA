@@ -78,7 +78,7 @@ disk /dev/vgdrbd/lvdrbd;
 address 192.168.139.144:7788;
 meta-disk internal;
 }
-on szabist1 {
+on node2 {
 device /dev/drbd0;
 disk /dev/vgdrbd/lvdrbd;
 address 192.168.139.145:7788;
